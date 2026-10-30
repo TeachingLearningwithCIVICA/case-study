@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--
+  CIVICA learning object — Teaching with the Case Study Method
+  Author: Dr Mina Sotiriou, European University Institute (Florence School of Transnational Governance)
+  Adapted to the CIVICA frame. Text unchanged. English only, at the author's request;
+  every readable string lives in LANGS.en.
+-->
+<html lang="en" data-theme="light"
+      data-lo-id="civica-tl-case-study-method-guide"
+      data-lo-author="Mina Sotiriou"
+      data-lo-institution="European University Institute"
+      data-lo-published="2026-09-10"
+      data-lo-languages="en"
+      data-lo-type="faculty-guide"
+      data-lo-licence="CC-BY-NC-SA-4.0"
+      data-lo-audience="teacher"
+      data-lo-topics="case-study-method,active-learning,assessment-design,postgraduate-teaching">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>/* Apply the system theme before first paint, so dark-mode readers see no light flash. */
+if (typeof window.matchMedia === "function" && window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";</script>
+<title>Teaching with the Case Study Method | Teaching &amp; Learning with CIVICA</title>
+<!-- ===== CIVICA learning object metadata: data-lo-*, <meta>, JSON-LD — keep in sync ===== -->
+<meta name="description" content="A practical guide to using cases in postgraduate social science teaching — what the method is, how to design cases, and how to assess them."/>
+<meta name="author" content="Mina Sotiriou"/>
+<meta name="theme-color" content="#244f9d"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Teaching with the Case Study Method"/>
+<meta property="og:description" content="A practical guide to using cases in postgraduate social science teaching — what the method is, how to design cases, and how to assess them."/>
+<meta property="og:site_name" content="Teaching and Learning with CIVICA"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Teaching with the Case Study Method",
+  "description": "A practical guide to using cases in postgraduate social science teaching — what the method is, how to design cases, and how to assess them.",
+  "learningResourceType": "faculty-guide",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "teacher"
+  },
+  "teaches": "Using, designing and assessing with cases in postgraduate social science teaching",
+  "inLanguage": [
+    "en"
+  ],
+  "datePublished": "2026-09-10",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "author": {
+    "@type": "Person",
+    "name": "Mina Sotiriou",
+    "honorificPrefix": "Dr",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "European University Institute"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CIVICA – The European University of Social Sciences",
+    "url": "https://www.civica.eu/"
+  },
+  "isPartOf": {
+    "@type": "Collection",
+    "name": "Teaching and Learning with CIVICA"
+  },
+  "about": [
+    "Case study method",
+    "Active learning",
+    "Assessment design",
+    "Postgraduate teaching"
+  ],
+  "keywords": "case study method, case teaching, dilemma case, interrupted case, case-based assessment"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,900;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-display:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --civica-mark:#244f9d; --civica-rule:rgba(36,79,157,.22); --on-mark:#FFFFFF;
+  /* The author's palette. One light-mode change, hue kept:
+       --muted #6B7280 -> #69707E (4.39 -> 4.5+:1 on --bg) */
+  --bg:#F3F4F6; --surface:#FFFFFF; --surface-2:#FBFAF7; --ink:#244F9D; --ink-deep:#11161F; --text:#2E333B; --muted:#69707E;
+  --border:#E1E3E8; --blue-bg:#E7ECFA; --blue-ic:#244F9D; --amber-bg:#FDF1DF; --amber-ic:#B9740B; --teal-bg:#E1F5EE; --teal-ic:#0B6B4F;
+  --th-bg:#244F9D; --on-th:#FFFFFF; --btn-bg:#244F9D; --on-btn:#FFFFFF;
+  --focus:#244F9D; --radius:14px;
+  --shadow:0 1px 2px rgba(17,22,31,.05), 0 4px 14px rgba(17,22,31,.06);
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  --civica-mark:#86acda; --civica-rule:rgba(134,172,218,.26); --on-mark:#11141a;
+  --bg:#11141a; --surface:#1b1f27; --surface-2:#20252e; --ink:#9fbdf0; --ink-deep:#eef1f6; --text:#d6dae2; --muted:#a4abb8;
+  --border:#2e3440; --blue-bg:#1f2c47; --blue-ic:#9fbdf0; --amber-bg:#3a2a12; --amber-ic:#f0b45c; --teal-bg:#12302a; --teal-ic:#6fd3b3;
+  --th-bg:#244F9D; --on-th:#FFFFFF; --btn-bg:#9fbdf0; --on-btn:#11141a;
+  --focus:#c3d6f7; --shadow:none;
+}
+*{ box-sizing:border-box; }
+[hidden]{ display:none !important; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+@media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *{ animation-duration:.001ms !important; transition-duration:.001ms !important; } }
+body{ margin:0; background:var(--bg); color:var(--text); font-family:var(--font-display); font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+a{ color:var(--blue-ic); text-underline-offset:3px; }
+:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:6px; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.mb0{ margin-bottom:0 !important; } .mt22{ margin-top:22px !important; }
+
+/* ---------- CIVICA chrome ---------- */
+.skip-link{ position:absolute; left:12px; top:-4rem; z-index:100; background:var(--civica-mark); color:var(--on-mark); font-weight:700; font-size:15px; padding:11px 18px; border-radius:10px; text-decoration:none; transition:top .2s ease; }
+.skip-link:focus{ top:12px; }
+.civica-bar{ border-bottom:1px solid var(--border); background:var(--bg); }
+.civica-bar > div{ max-width:880px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.civica-mark{ display:flex; flex-direction:column; gap:2px; text-decoration:none; line-height:1; }
+/* PLACEHOLDER WORDMARK — the CIVICA logo is set in Movement (licensed, NM Type)
+   and cannot be embedded. Swap for the official transparent SVG when available. */
+.civica-wordmark{ font-weight:900; font-size:18px; letter-spacing:.06em; color:var(--civica-mark); }
+.civica-sub{ font-weight:600; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.ctl{ font-family:var(--font-display); font-size:14px; font-weight:700; letter-spacing:.03em; background:transparent; color:var(--ink-deep); border:1.5px solid var(--border); border-radius:999px; padding:9px 15px; cursor:pointer; line-height:1; min-height:36px; }
+.ctl:hover{ border-color:var(--civica-mark); color:var(--civica-mark); }
+.ctl-theme{ display:flex; align-items:center; gap:7px; padding-left:12px; }
+.ctl-theme svg{ width:15px; height:15px; flex-shrink:0; }
+
+/* ---------- the author's layout ---------- */
+.wrap{ max-width:880px; margin:0 auto; padding:0 20px 40px; }
+header.hero{ padding:32px 20px 32px; border-bottom:1px solid var(--border); background:var(--bg); }
+.hero-inner{ max-width:880px; margin:0 auto; }
+h1{ font-size:clamp(28px,4vw,38px); line-height:1.15; color:var(--ink-deep); margin:0 0 10px; font-weight:900; letter-spacing:-.01em; }
+.subtitle{ font-size:18px; color:var(--muted); margin:0 0 26px; max-width:60ch; }
+.hero-actions{ display:flex; flex-wrap:wrap; gap:12px; }
+.btn{ display:inline-flex; align-items:center; gap:8px; font-size:15px; font-weight:700; text-decoration:none; padding:10px 18px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--ink); cursor:pointer; box-shadow:var(--shadow); transition:transform .12s ease; }
+.btn:hover{ transform:translateY(-1px); }
+.btn.primary{ background:var(--btn-bg); color:var(--on-btn); border-color:var(--btn-bg); }
+.btn svg{ width:16px; height:16px; flex:none; }
+nav.toc{ margin:28px auto 0; max-width:880px; padding:0 20px; }
+nav.toc h2{ font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 10px; font-weight:900; }
+.toc-list{ display:flex; flex-wrap:wrap; gap:8px; list-style:none; margin:0; padding:0; }
+.toc-list a{ display:inline-block; font-size:14px; font-weight:700; text-decoration:none; color:var(--ink); background:var(--surface); border:1px solid var(--border); padding:7px 13px; border-radius:999px; }
+.toc-list a:hover{ border-color:var(--blue-ic); }
+main{ padding-top:26px; }
+
+/* ---------- section cards (accessible accordion) ---------- */
+section.section{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:16px; overflow:hidden; scroll-margin-top:20px; }
+.sec-h{ margin:0; }
+.sec-toggle{ width:100%; display:flex; align-items:center; gap:14px; padding:20px 22px; background:none; border:0; cursor:pointer; text-align:left; font:inherit; color:inherit; }
+.sec-toggle:focus-visible{ outline-offset:-3px; border-radius:var(--radius); }
+.icon-badge{ flex:none; width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; }
+.icon-badge svg{ width:20px; height:20px; }
+.icon-badge.blue{ background:var(--blue-bg); } .icon-badge.blue svg{ color:var(--blue-ic); }
+.icon-badge.amber{ background:var(--amber-bg); } .icon-badge.amber svg{ color:var(--amber-ic); }
+.icon-badge.teal{ background:var(--teal-bg); } .icon-badge.teal svg{ color:var(--teal-ic); }
+.s-title{ flex:1; display:block; }
+.s-name{ display:block; font-size:19px; color:var(--ink-deep); font-weight:700; line-height:1.3; }
+.s-desc{ display:block; margin:2px 0 0; font-size:15px; color:var(--muted); font-weight:400; }
+.chevron{ flex:none; width:20px; height:20px; color:var(--muted); transition:transform .18s ease; }
+.sec-toggle[aria-expanded="true"] .chevron{ transform:rotate(180deg); }
+.section-body{ padding:0 22px 24px 74px; }
+.section-body p{ margin:0 0 14px; font-size:16px; }
+.section-body ul{ margin:0 0 14px; padding-left:20px; }
+.section-body li{ margin-bottom:9px; font-size:16px; }
+.section-body li b, .section-body p b{ color:var(--ink-deep); }
+@media (max-width:600px){ .section-body{ padding:0 18px 22px; } .sec-toggle{ padding:18px; } }
+
+.tbl-wrap{ overflow-x:auto; margin:6px 0 18px; border:1px solid var(--border); border-radius:10px; }
+table{ width:100%; border-collapse:collapse; font-size:15px; min-width:520px; }
+th{ text-align:left; background:var(--th-bg); color:var(--on-th); padding:11px 14px; font-weight:700; }
+td{ padding:11px 14px; border-top:1px solid var(--border); vertical-align:top; }
+tr:nth-child(even) td{ background:var(--surface-2); }
+td.label{ font-weight:700; color:var(--ink-deep); white-space:nowrap; }
+.qlist{ list-style:none; margin:0 0 18px; padding:0; display:grid; gap:8px; }
+.qlist li{ display:flex; gap:10px; align-items:flex-start; font-size:16px; background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:10px 14px; }
+.qlist li .num{ flex:none; width:24px; height:24px; border-radius:50%; background:var(--blue-bg); color:var(--blue-ic); font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+.video-grid{ display:flex; flex-wrap:wrap; gap:14px; margin:6px 0; }
+.video-card{ display:flex; flex-direction:column; gap:10px; text-decoration:none; border:1px solid var(--border); border-radius:12px; padding:16px; background:var(--surface-2); transition:border-color .12s ease, transform .12s ease; flex:1 1 260px; min-width:0; }
+.video-card:hover{ border-color:var(--blue-ic); transform:translateY(-1px); }
+.video-thumb{ width:100%; aspect-ratio:16/9; border-radius:9px; display:flex; align-items:center; justify-content:center; }
+.video-thumb.harvard{ background:linear-gradient(135deg,#7A1B1B 0%,#A5292E 100%); }
+.video-thumb.columbia{ background:linear-gradient(135deg,#001F54 0%,#2C4A9E 100%); }
+.video-thumb svg{ width:42px; height:42px; color:#fff; opacity:.95; }
+.video-source{ font-size:12.5px; font-weight:900; letter-spacing:.03em; text-transform:uppercase; color:var(--muted); }
+.video-title{ font-size:16px; font-weight:700; color:var(--ink-deep); }
+.video-blurb{ font-size:15px; color:var(--muted); margin:0; }
+.ext-icon{ width:13px; height:13px; display:inline; vertical-align:-1px; margin-left:3px; }
+.read-list{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.read-list li{ border:1px solid var(--border); border-radius:10px; padding:13px 16px; background:var(--surface-2); }
+.read-list a{ font-weight:700; text-decoration:none; }
+.read-list a:hover{ text-decoration:underline; }
+.read-list .src{ display:block; font-size:14px; color:var(--muted); margin-top:2px; }
+.ref-mark{ display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; text-decoration:none; vertical-align:super; color:var(--ink); background:var(--blue-bg); border-radius:5px; min-width:18px; height:18px; padding:0 3px; margin-left:3px; line-height:1; }
+.ref-mark:hover{ background:var(--ink); color:var(--surface); }
+.references-block{ max-width:880px; margin:0 auto 24px; padding:0 20px; scroll-margin-top:20px; }
+.references-block h2{ font-size:14px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 12px; font-weight:900; }
+.references-list{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.references-list li{ display:flex; gap:10px; font-size:14.5px; color:var(--text); background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 14px; }
+.references-list .refnum{ flex:none; font-weight:700; color:var(--ink); background:var(--blue-bg); width:22px; height:22px; border-radius:5px; display:flex; align-items:center; justify-content:center; font-size:12.5px; }
+.references-list a{ font-weight:600; }
+footer.page-footer{ max-width:880px; margin:36px auto 0; padding:24px 20px 40px; border-top:1px solid var(--border); text-align:left; }
+.citation{ font-size:14px; font-style:italic; color:var(--muted); margin:0 0 4px; line-height:1.6; }
+/* ---------- CIVICA attribution ---------- */
+.attribution{ margin-top:1.4rem; padding-top:1.2rem; border-top:1.5px solid var(--civica-rule); display:grid; gap:.45rem; font-size:14px; color:var(--ink-deep); }
+.attr-value{ flex:1 1 18rem; min-width:0; }
+.attr-line{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.2rem .55rem; margin:0; }
+.attr-label{ font-weight:900; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--civica-mark); flex:0 0 7.5rem; }
+.attribution a{ color:var(--ink-deep); text-decoration-color:var(--civica-rule); }
+.attr-role{ color:var(--muted); font-size:13px; }
+.attr-funding{ margin:.5rem 0 0; font-size:13px; color:var(--muted); }
+@media (max-width:600px){ .attr-label{ flex:1 0 100%; } .civica-sub{ display:none; } }
+@media print{
+  .civica-bar, .skip-link, .hero-actions, nav.toc, .chevron{ display:none !important; }
+  body{ background:#fff; color:#000; } section.section{ box-shadow:none; break-inside:auto; }
+  .qlist li, tr, .video-card, .references-list li{ break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" id="t-skip"></a>
+<div class="civica-bar">
+  <div>
+    <!-- PLACEHOLDER: swap for the official transparent CIVICA SVG if available. -->
+    <a class="civica-mark" href="https://www.civica.eu/" target="_blank" rel="noopener noreferrer" id="t-mark">
+      <span class="civica-wordmark" aria-hidden="true">CIVICA</span>
+      <span class="civica-sub" id="t-mark-sub" aria-hidden="true"></span>
+    </a>
+    <button type="button" class="ctl ctl-theme" id="theme-btn" aria-pressed="false">
+      <span id="theme-icon" aria-hidden="true"></span><span id="theme-label"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<main id="main">
+<header class="hero">
+<div class="hero-inner">
+<h1 data-k="header01"></h1>
+<p class="subtitle" data-k="header02"></p>
+<div class="hero-actions">
+<a class="btn primary" href="#overview">
+<svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"></path></svg> <span data-k="header03"></span> </a>
+</div>
+</div>
+</header>
+<nav aria-labelledby="toc-h" class="toc">
+<h2 data-k="nav01" id="toc-h"></h2>
+<ul class="toc-list">
+<li><a data-k="nav02" href="#overview"></a></li>
+<li><a data-k="nav03" href="#types"></a></li>
+<li><a data-k="nav04" href="#designing"></a></li>
+<li><a data-k="nav05" href="#assessment"></a></li>
+<li><a data-k="nav06" href="#watch"></a></li>
+<li><a data-k="nav07" href="#read"></a></li>
+</ul>
+</nav>
+<div class="wrap">
+<section aria-labelledby="overview-title" class="section" data-open="" id="overview"><h2 class="sec-h"><button aria-controls="overview-body" aria-expanded="false" class="sec-toggle" id="overview-title" type="button"><span aria-hidden="true" class="icon-badge blue">
+<svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 2"></path></svg>
+</span><span class="s-title"><span class="s-name" data-k="overview01"></span><span class="s-desc" data-k="overview02"></span></span><svg aria-hidden="true" class="chevron" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></h2><div aria-labelledby="overview-title" class="section-body" id="overview-body" role="region">
+<p data-k="overview03"></p>
+<p data-k="overview04"></p>
+<p data-k="overview05"></p>
+<p class="mb0" data-k="overview06"></p>
+<ul>
+<li data-k="overview07"></li>
+<li data-k="overview08"></li>
+<li data-k="overview09"></li>
+<li data-k="overview10"></li>
+<li data-k="overview11"></li>
+<li data-k="overview12"></li>
+</ul>
+</div></section>
+<section aria-labelledby="types-title" class="section" id="types"><h2 class="sec-h"><button aria-controls="types-body" aria-expanded="false" class="sec-toggle" id="types-title" type="button"><span aria-hidden="true" class="icon-badge teal">
+<svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect height="16" rx="2" width="18" x="3" y="4"></rect><path d="M3 10h18M9 10v10"></path></svg>
+</span><span class="s-title"><span class="s-name" data-k="types01"></span><span class="s-desc" data-k="types02"></span></span><svg aria-hidden="true" class="chevron" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></h2><div aria-labelledby="types-title" class="section-body" id="types-body" role="region">
+<p><span data-k="types03"></span> <a aria-label="See reference 1 in References section" class="ref-mark" data-k="types04" href="#references"></a></p>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th data-k="types05" scope="col"></th><th data-k="types06" scope="col"></th><th data-k="types07" scope="col"></th></tr></thead>
+<tbody>
+<tr><td class="label" data-k="types08"></td><td data-k="types09"></td><td data-k="types10"></td></tr>
+<tr><td class="label" data-k="types11"></td><td data-k="types12"></td><td data-k="types13"></td></tr>
+<tr><td class="label" data-k="types14"></td><td data-k="types15"></td><td data-k="types16"></td></tr>
+<tr><td class="label" data-k="types17"></td><td data-k="types18"></td><td data-k="types19"></td></tr>
+</tbody>
+</table>
+</div>
+</div></section>
+<section aria-labelledby="designing-title" class="section" id="designing"><h2 class="sec-h"><button aria-controls="designing-body" aria-expanded="false" class="sec-toggle" id="designing-title" type="button"><span aria-hidden="true" class="icon-badge amber">
+<svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2v4M4.9 4.9l2.8 2.8M2 12h4M4.9 19.1l2.8-2.8M12 18v4M16.3 16.3l2.8 2.8M18 12h4M16.3 7.7l2.8-2.8"></path><circle cx="12" cy="12" r="4"></circle></svg>
+</span><span class="s-title"><span class="s-name" data-k="designing01"></span><span class="s-desc" data-k="designing02"></span></span><svg aria-hidden="true" class="chevron" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></h2><div aria-labelledby="designing-title" class="section-body" id="designing-body" role="region">
+<ul>
+<li data-k="designing03"></li>
+<li data-k="designing04"></li>
+<li data-k="designing05"></li>
+<li data-k="designing06"></li>
+</ul>
+</div></section>
+<section aria-labelledby="assessment-title" class="section" id="assessment"><h2 class="sec-h"><button aria-controls="assessment-body" aria-expanded="false" class="sec-toggle" id="assessment-title" type="button"><span aria-hidden="true" class="icon-badge blue">
+<svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+</span><span class="s-title"><span class="s-name" data-k="assessment01"></span><span class="s-desc" data-k="assessment02"></span></span><svg aria-hidden="true" class="chevron" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></h2><div aria-labelledby="assessment-title" class="section-body" id="assessment-body" role="region">
+<p data-k="assessment03"></p>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th data-k="assessment04" scope="col"></th><th data-k="assessment05" scope="col"></th></tr></thead>
+<tbody>
+<tr><td class="label" data-k="assessment06"></td><td data-k="assessment07"></td></tr>
+<tr><td class="label" data-k="assessment08"></td><td data-k="assessment09"></td></tr>
+<tr><td class="label" data-k="assessment10"></td><td data-k="assessment11"></td></tr>
+<tr><td class="label" data-k="assessment12"></td><td data-k="assessment13"></td></tr>
+</tbody>
+</table>
+</div>
+<p class="mt22" data-k="assessment14"></p>
+<ol class="qlist">
+<li><span aria-hidden="true" class="num" data-k="assessment15"></span><span data-k="assessment16"></span></li>
+<li><span aria-hidden="true" class="num" data-k="assessment17"></span><span data-k="assessment18"></span></li>
+<li><span aria-hidden="true" class="num" data-k="assessment19"></span><span data-k="assessment20"></span></li>
+<li><span aria-hidden="true" class="num" data-k="assessment21"></span><span data-k="assessment22"></span></li>
+<li><span aria-hidden="true" class="num" data-k="assessment23"></span><span data-k="assessment24"></span></li>
+<li><span aria-hidden="true" class="num" data-k="assessment25"></span><b data-k="assessment26"></b></li>
+</ol>
+<p data-k="assessment27"></p>
+<ul>
+<li data-k="assessment28"></li>
+<li data-k="assessment29"></li>
+<li data-k="assessment30"></li>
+<li data-k="assessment31"></li>
+<li data-k="assessment32"></li>
+<li data-k="assessment33"></li>
+<li data-k="assessment34"></li>
+</ul>
+<p data-k="assessment35"></p>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th data-k="assessment36" scope="col"></th><th data-k="assessment37" scope="col"></th></tr></thead>
+<tbody>
+<tr><td class="label" data-k="assessment38"></td><td data-k="assessment39"></td></tr>
+<tr><td class="label" data-k="assessment40"></td><td data-k="assessment41"></td></tr>
+<tr><td class="label" data-k="assessment42"></td><td data-k="assessment43"></td></tr>
+<tr><td class="label" data-k="assessment44"></td><td data-k="assessment45"></td></tr>
+<tr><td class="label" data-k="assessment46"></td><td data-k="assessment47"></td></tr>
+<tr><td class="label" data-k="assessment48"></td><td data-k="assessment49"></td></tr>
+</tbody>
+</table>
+</div>
+</div></section>
+<section aria-labelledby="watch-title" class="section" id="watch"><h2 class="sec-h"><button aria-controls="watch-body" aria-expanded="false" class="sec-toggle" id="watch-title" type="button"><span aria-hidden="true" class="icon-badge teal">
+<svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="5"></rect><path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none"></path></svg>
+</span><span class="s-title"><span class="s-name" data-k="watch01"></span><span class="s-desc" data-k="watch02"></span></span><svg aria-hidden="true" class="chevron" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></h2><div aria-labelledby="watch-title" class="section-body" id="watch-body" role="region">
+<p data-k="watch03"></p>
+<div class="video-grid">
+<a class="video-card" href="https://www.youtube.com/watch?v=eA5R41F7d9Q" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="video-thumb harvard">
+<svg aria-hidden="true" fill="currentColor" focusable="false" viewBox="0 0 24 24"><circle cx="12" cy="12" fill="rgba(255,255,255,0.15)" r="11"></circle><path d="M10 8.5v7l6-3.5-6-3.5Z"></path></svg>
+</span>
+<span class="video-source" data-k="watch04"></span>
+<span class="video-title"><span data-k="watch05"></span><svg aria-hidden="true" class="ext-icon" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+<p class="video-blurb" data-k="watch06"></p>
+</a>
+<a class="video-card" href="https://www.youtube.com/watch?v=NaCoEcE8QOc" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="video-thumb columbia">
+<svg aria-hidden="true" fill="currentColor" focusable="false" viewBox="0 0 24 24"><circle cx="12" cy="12" fill="rgba(255,255,255,0.15)" r="11"></circle><path d="M10 8.5v7l6-3.5-6-3.5Z"></path></svg>
+</span>
+<span class="video-source" data-k="watch07"></span>
+<span class="video-title"><span data-k="watch08"></span><svg aria-hidden="true" class="ext-icon" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+<p class="video-blurb" data-k="watch09"></p>
+</a>
+</div>
+</div></section>
+<section aria-labelledby="read-title" class="section" id="read"><h2 class="sec-h"><button aria-controls="read-body" aria-expanded="false" class="sec-toggle" id="read-title" type="button"><span aria-hidden="true" class="icon-badge amber">
+<svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"></path></svg>
+</span><span class="s-title"><span class="s-name" data-k="read01"></span><span class="s-desc" data-k="read02"></span></span><svg aria-hidden="true" class="chevron" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></h2><div aria-labelledby="read-title" class="section-body" id="read-body" role="region">
+<ul class="read-list">
+<li>
+<a href="https://ctl.columbia.edu/resources-and-technology/resources/case-method/" rel="noopener noreferrer" target="_blank"><span data-k="read03"></span><svg aria-hidden="true" class="ext-icon" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<span class="src" data-k="read04"></span>
+</li>
+<li>
+<a href="https://www.hbs.edu/teaching/case-method/Pages/default.aspx" rel="noopener noreferrer" target="_blank"><span data-k="read05"></span><svg aria-hidden="true" class="ext-icon" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<span class="src" data-k="read06"></span>
+</li>
+</ul>
+</div></section>
+</div>
+<section aria-labelledby="refs-h" class="references-block" id="references">
+<h2 data-k="references01" id="refs-h"></h2>
+<ol class="references-list">
+<li>
+<span aria-hidden="true" class="refnum" data-k="references02"></span>
+<span><span data-k="references03"></span> <a href="https://ctl.columbia.edu/resources-and-technology/resources/case-method/" rel="noopener noreferrer" target="_blank"><span data-k="references04"></span><svg aria-hidden="true" class="ext-icon" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><span data-k="references05"></span> </span>
+</li>
+<li>
+<span aria-hidden="true" class="refnum" data-k="references06"></span>
+<span><span data-k="references07"></span> <a href="https://info.lse.ac.uk/staff/divisions/Eden-Centre/Assessment-and-Feedback-Toolkit/Assessment-methods/Case-studies" rel="noopener noreferrer" target="_blank"><span data-k="references08"></span><svg aria-hidden="true" class="ext-icon" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><span data-k="references09"></span> </span>
+</li>
+</ol>
+</section>
+</main>
+<footer class="page-footer"><p class="citation" id="t-cite"></p>
+
+
+
+
+  <!-- ===== CIVICA attribution — mirrors the JSON-LD in <head> ===== -->
+  <div class="attribution">
+    <p class="attr-line"><span class="attr-label" id="t-lbl-author"></span>
+      <span class="attr-value">Dr Mina Sotiriou <span class="attr-role">European University Institute, Florence School of Transnational Governance</span></span></p>
+    <p class="attr-line"><span class="attr-label" id="t-lbl-published"></span><time id="published-date"></time></p>
+    <p class="attr-line"><span class="attr-label" id="t-lbl-part"></span>
+      <a href="https://www.civica.eu/" target="_blank" rel="noopener noreferrer">Teaching and Learning with CIVICA</a></p>
+    <p class="attr-line"><span class="attr-label" id="t-lbl-licence"></span><span id="t-licence" class="attr-value"></span></p>
+    <p class="attr-funding" id="t-funding"></p>
+  </div>
+</footer>
+
+<p class="sr-only" aria-live="polite" id="live"></p>
+<script>
+(function(){
+const PUBLISHED = "2026-09-10";
+const LICENCE_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
+const LICENCE_NAME = "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)";
+/* ===== Language pack — English only, at the author's request (her text, verbatim). ===== */
+const LANGS = window.LANGS = {}; LANGS.en = {
+ "citation": "Suggested citation: Sotiriou, M. (2026). Teaching with the Case Study Method. EUI Florence School of Transnational Governance. Teaching & Learning with CIVICA.",
+ "developed": "Developed by Dr Mina Sotiriou, EUI – Florence School of Transnational Governance, using Claude (Anthropic), 2026.",
+ "header01": "Teaching with the Case Study Method",
+ "header02": "A practical guide to using cases in postgraduate social science teaching — what the method is, how to design cases, and how to assess them.",
+ "header03": "Start reading",
+ "nav01": "On this page",
+ "nav02": "Overview",
+ "nav03": "Types of cases",
+ "nav04": "Designing a case",
+ "nav05": "Assessing with cases",
+ "nav06": "Watch",
+ "nav07": "Further reading",
+ "overview01": "Overview: what is the case study method?",
+ "overview02": "What it is, and why it works",
+ "overview03": "The case study method is a practical, student-centred approach. It presents realistic, complex, and contextually rich situations, often involving a dilemma, conflict, or problem that one or more characters in the case must negotiate.",
+ "overview04": "Students take on the role of decision-makers — such as policy advisors, social workers, or NGO leaders — and are asked to analyse situations, explore options, apply theory, and justify their recommendations.",
+ "overview05": "Instead of searching for a single \"correct\" answer, students are encouraged to discuss, debate, and weigh evidence to arrive at well-reasoned conclusions. The aim is to mirror professional practice, helping students develop analytical thinking, ethical judgement, and confidence in tackling real-life dilemmas.",
+ "overview06": "**Why use cases?**",
+ "overview07": "**Matches how students naturally learn** — many understand concepts better through real examples than abstract principles alone.",
+ "overview08": "**Proven effectiveness** — research confirms case teaching improves students' perception of their own development.",
+ "overview09": "**Exemplifies research-based education** — students engage directly with evidence, methods, and findings from real-world research contexts.",
+ "overview10": "**Creates authentic challenges** — students apply course knowledge to situations that mirror real-world complexity: \"What would I actually do in this situation?\"",
+ "overview11": "**Is an active learning approach** — students ask the questions, solve problems, work with peers, and navigate ambiguity.",
+ "overview12": "**Develops professional skills** — critical thinking, decision-making, and communication.",
+ "types01": "Types of cases and learning",
+ "types02": "Match the format to the skill you want to promote",
+ "types03": "Different case formats promote different kinds of learning. Choosing the right type depends on what you want students to practise.",
+ "types04": "1",
+ "types05": "Type of case",
+ "types06": "Description",
+ "types07": "Promoted learning",
+ "types08": "Directed case",
+ "types09": "Presents a scenario followed by discussion using a set of \"directed\" / closed-ended questions answerable from the course material.",
+ "types10": "Understanding of fundamental concepts, principles, and facts",
+ "types11": "Dilemma or decision case",
+ "types12": "Presents an individual, institution, or community faced with a problem that must be solved. Students may be shown the actual historical outcome afterwards.",
+ "types13": "Problem-solving and decision-making skills",
+ "types14": "Interrupted case",
+ "types15": "Presents a problem in a progressive-disclosure format. Students receive the case in parts, deciding on each before moving on.",
+ "types16": "Problem-solving skills",
+ "types17": "Analysis or issue case",
+ "types18": "Focuses on analysing the situation presented, including \"retrospective\" cases that tell a story and ask students why alternatives were not taken.",
+ "types19": "Analytical skills",
+ "designing01": "Designing and selecting cases",
+ "designing02": "What to consider before you write or choose a case",
+ "designing03": "**Select problem situations** that are appropriate both for the concepts being taught and for your students.",
+ "designing04": "**Use cases that are relevant** to students' interests and experience levels.",
+ "designing05": "**Include factual information** as well as the opinions and views of the people involved.",
+ "designing06": "**Withhold ready-made solutions** until students have reached their own conclusions — this lets them compare their reasoning with the actual decision used to resolve the problem.",
+ "assessment01": "Assessing with cases",
+ "assessment02": "Formats, a question framework, advantages, and design tips",
+ "assessment03": "Most case assessments ask students to answer an open-ended question or develop a solution to a problem with multiple potential solutions. Requirements can range from a one-paragraph answer to a fully developed group action plan, proposal, or decision — formative or summative.",
+ "assessment04": "Format",
+ "assessment05": "Purpose",
+ "assessment06": "Analytical essay",
+ "assessment07": "Helps students explore complex issues by applying theory to real-life situations and developing a well-reasoned argument.",
+ "assessment08": "Problem-based report",
+ "assessment09": "Trains students to identify real-world problems and develop practical, well-supported solutions.",
+ "assessment10": "Group presentation",
+ "assessment11": "Builds teamwork and helps students explain complex ideas clearly and persuasively.",
+ "assessment12": "Reflective portfolio",
+ "assessment13": "Supports long-term thinking and personal development by encouraging students to reflect on how their ideas change over time.",
+ "assessment14": "**A simple assessment framework** — questions to scaffold a case-based task:",
+ "assessment15": "1",
+ "assessment16": "What is the issue?",
+ "assessment17": "2",
+ "assessment18": "What is the goal of the analysis?",
+ "assessment19": "3",
+ "assessment20": "What is the context of the problem?",
+ "assessment21": "4",
+ "assessment22": "What key facts should be considered?",
+ "assessment23": "5",
+ "assessment24": "What alternatives are available to the decision-maker?",
+ "assessment25": "6",
+ "assessment26": "What would you recommend — and why?",
+ "assessment27": "**Advantages of case study assessment**",
+ "assessment28": "Enables students to apply knowledge and skills to real-life situations.",
+ "assessment29": "Can be undertaken individually or as a group assessment.",
+ "assessment30": "Assesses higher-order learning outcomes — application, analysis, evaluation.",
+ "assessment31": "Well adapted to multi- or inter-disciplinary learning.",
+ "assessment32": "Lets students demonstrate a range of skills: selecting information, analysis, decision-making, problem-solving, presentation.",
+ "assessment33": "In a group approach, students showcase collaboration and communication skills.",
+ "assessment34": "Supports the development of valuable employability skills.",
+ "assessment35": "**Designing case study assessments — what to consider**",
+ "assessment36": "What to do",
+ "assessment37": "What it means",
+ "assessment38": "1. Start with a clear purpose",
+ "assessment39": "Link to your learning outcomes and define what you are assessing — critical thinking, ethics, theory use, etc.",
+ "assessment40": "2. Use realistic, relevant cases",
+ "assessment41": "Base the case on real events, professional dilemmas, or policy issues.",
+ "assessment42": "3. Include multiple viewpoints",
+ "assessment43": "Build in conflicting interests or stakeholder perspectives.",
+ "assessment44": "4. Scaffold the task",
+ "assessment45": "Offer prompts, frameworks, or stages (e.g. problem → analysis → response).",
+ "assessment46": "5. Focus on reasoning, not just answers",
+ "assessment47": "Ask students to explain how they reached their conclusions — this also helps with AI-resilience.",
+ "assessment48": "6. Share a transparent rubric",
+ "assessment49": "Provide marking criteria with descriptors (e.g. clarity, use of theory, originality).",
+ "watch01": "Watch: the case method in practice",
+ "watch02": "Short films from two institutions built around the method",
+ "watch03": "Both videos are hosted externally and open in a new tab.",
+ "watch04": "Harvard Business School · Christensen Center",
+ "watch05": "Inside the HBS Case Method",
+ "watch06": "Faculty and students on how case-method teaching works at HBS — origin of the method and what it looks like in the classroom.",
+ "watch07": "Columbia CTL · Mailman School of Public Health",
+ "watch08": "Teaching with the Case Method: Helen De Pinho",
+ "watch09": "Dr Helen De Pinho on using the case method in the Mailman core curriculum's Integration of Science and Practice course.",
+ "read01": "Further reading",
+ "read02": "Institutional guides on case-method teaching",
+ "read03": "Case Method Teaching and Learning",
+ "read04": "Columbia Center for Teaching and Learning — overview, learner-centred and digitally-enhanced approaches, and getting-started tips.",
+ "read05": "Teaching by the Case Method",
+ "read06": "Christensen Center for Teaching & Learning, Harvard Business School — written guidance plus faculty video commentary.",
+ "references01": "References",
+ "references02": "1",
+ "references03": "Case-type taxonomy (directed, dilemma, interrupted, analysis) adapted from",
+ "references04": "Columbia Center for Teaching and Learning — Case Method Teaching and Learning",
+ "references05": ".",
+ "references06": "2",
+ "references07": "Assessment design considerations informed by LSE Eden Centre —",
+ "references08": "Assessment and Feedback Toolkit: Case studies",
+ "references09": ".",
+ "docTitle": "Teaching with the Case Study Method | Teaching & Learning with CIVICA",
+ "skip": "Skip to content",
+ "markLabel": "CIVICA — Teaching and Learning (opens in a new tab)",
+ "markSub": "Teaching & Learning",
+ "themeToDark": "Dark",
+ "themeToLight": "Light",
+ "themeToDarkLabel": "Switch to dark mode",
+ "themeToLightLabel": "Switch to light mode",
+ "newTab": " (opens in a new tab)",
+ "lblAuthor": "Author",
+ "lblPublished": "Published",
+ "lblPart": "Part of",
+ "lblLicence": "Licence",
+ "licence": "This work is licensed under {link}, except where otherwise noted.",
+ "funding": "Co-funded by the European Union"
+};
+const T = LANGS.en;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const rich = s => esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\*(.+?)\*/g,"<em>$1</em>");
+document.title = T.docTitle;
+document.querySelectorAll("[data-k]").forEach(el => { el.innerHTML = rich(T[el.dataset.k]); });
+$("t-cite").innerHTML = esc(T.citation) + "<br>\n" + esc(T.developed);
+/* Every link that opens a new tab says so to screen-reader users. */
+document.querySelectorAll('a[target="_blank"]').forEach(a => {
+  if (a.id === "t-mark") return;
+  const sp = document.createElement("span"); sp.className = "sr-only"; sp.textContent = T.newTab; a.appendChild(sp);
+});
+
+/* ===== Section cards: heading > button[aria-expanded] (replaces <details>,
+   whose <summary> hid the headings from screen readers) ===== */
+const sections = [...document.querySelectorAll("section.section")];
+function setOpen(sec, open){
+  const btn = sec.querySelector(".sec-toggle"), body = $(btn.getAttribute("aria-controls"));
+  btn.setAttribute("aria-expanded", String(open)); body.hidden = !open;
+}
+sections.forEach(sec => {
+  setOpen(sec, sec.hasAttribute("data-open"));          /* the Overview starts open, as before */
+  sec.querySelector(".sec-toggle").addEventListener("click", e => {
+    setOpen(sec, e.currentTarget.getAttribute("aria-expanded") !== "true");
+  });
+});
+/* "On this page" and "Start reading" open the section they point to. */
+function openFromHash(hash){
+  const id = (hash || "").replace("#", ""); if (!id) return;
+  const sec = sections.find(s => s.id === id); if (sec) setOpen(sec, true);
+}
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", () => openFromHash(a.getAttribute("href"))));
+window.addEventListener("hashchange", () => openFromHash(location.hash));
+openFromHash(location.hash);
+/* Print every section, then restore. */
+let closed = [];
+window.addEventListener("beforeprint", () => { closed = sections.filter(s => s.querySelector(".sec-toggle").getAttribute("aria-expanded") !== "true"); closed.forEach(s => setOpen(s, true)); });
+window.addEventListener("afterprint", () => { closed.forEach(s => setOpen(s, false)); closed = []; });
+
+/* ===== CIVICA frame ===== */
+$("t-skip").textContent = T.skip; $("t-mark").setAttribute("aria-label", T.markLabel); $("t-mark-sub").textContent = T.markSub;
+$("t-lbl-author").textContent = T.lblAuthor; $("t-lbl-published").textContent = T.lblPublished;
+$("t-lbl-part").textContent = T.lblPart; $("t-lbl-licence").textContent = T.lblLicence; $("t-funding").textContent = T.funding;
+$("t-licence").innerHTML = esc(T.licence).replace("{link}", '<a href="' + LICENCE_URL + '" target="_blank" rel="noopener noreferrer license">' + esc(LICENCE_NAME) + '<span class="sr-only">' + esc(T.newTab) + '</span></a>');
+const pd = $("published-date"); pd.setAttribute("datetime", PUBLISHED);
+pd.textContent = new Intl.DateTimeFormat("en-GB", { day:"numeric", month:"long", year:"numeric", timeZone:"UTC" }).format(new Date(PUBLISHED + "T12:00:00Z"));
+const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v2.4M12 19.8v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>';
+const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1z"/></svg>';
+function updateThemeButton(){
+  const dark = document.documentElement.dataset.theme === "dark";
+  $("theme-icon").innerHTML = dark ? SUN : MOON;
+  $("theme-label").textContent = dark ? T.themeToLight : T.themeToDark;
+  $("theme-btn").setAttribute("aria-pressed", String(dark));
+  $("theme-btn").setAttribute("aria-label", dark ? T.themeToLightLabel : T.themeToDarkLabel);
+}
+$("theme-btn").addEventListener("click", () => {
+  document.documentElement.dataset.theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  updateThemeButton();
+});
+updateThemeButton();
+})();
+</script>
+</body>
+</html>
